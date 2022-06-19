@@ -41,7 +41,7 @@ function Login() {
 
   return (
     <>
-      
+      <HeaderMessage />
       <Form loading={formLoading} error={errorMsg !== null} onSubmit={handleSubmit}>
         <Message
           error
