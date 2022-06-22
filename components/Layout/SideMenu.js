@@ -27,7 +27,7 @@ function SideMenu({
         </Link>
         <br />
 
-        <Link href="/svit/welcome">
+        {/* <Link href="/svit/welcome">
           <List.Item active={isActive("/svit/welcome")}>
             <Icon 
             name="hand point right"
@@ -35,7 +35,7 @@ function SideMenu({
             <List.Content>{pc && <List.Header content="Svit" />}</List.Content>
           </List.Item>
         </Link>
-        <br />
+        <br /> */}
 
         <List.Item active={isActive("/messages")} as="a" href="/messages">
           <Icon
@@ -74,7 +74,7 @@ function SideMenu({
             <List.Content>{pc && <List.Header content="Account" />}</List.Content>
           </List.Item>
         </Link>
-        <br />
+        {/* <br />
         <Link href="/developers/Developers">
           <List.Item active={isActive("/developers/Developers")}>
             <Icon
@@ -87,7 +87,7 @@ function SideMenu({
               {pc && <List.Header content="Developers" />}
             </List.Content>
           </List.Item>
-        </Link>
+        </Link> */}
         <br />
 
         <List.Item onClick={() => logoutUser(email)}>
