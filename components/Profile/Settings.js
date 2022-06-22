@@ -32,7 +32,7 @@ function Settings({ newMessagePopup }) {
         </>
       )}
 
-      <List size="huge" animated>
+      <List size="huge" animated className="ml-4">
         <List.Item>
           <List.Icon name="user secret" size="large" verticalAlign="middle" />
           <List.Content>

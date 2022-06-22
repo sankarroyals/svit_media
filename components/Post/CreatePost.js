@@ -35,6 +35,7 @@ function CreatePost({ user, setPosts }) {
     height: "150px",
     width: "150px",
     border: "dotted",
+   
     paddingTop: media === null && "60px",
     cursor: "pointer",
     borderColor: highlighted ? "green" : "black"
@@ -90,6 +91,7 @@ function CreatePost({ user, setPosts }) {
         <Form.Group>
           <Image src={user.profilePicUrl} circular avatar inline />
           <Form.TextArea
+          className="mb-4"
             placeholder="Whats Happening"
             name="text"
             value={newPost.text}
@@ -101,10 +103,12 @@ function CreatePost({ user, setPosts }) {
 
         <Form.Group>
           <Form.Input
+          className="smallH"
+          style={{}}
             value={newPost.location}
             name="location"
             onChange={handleChange}
-            label="Add Location"
+            
             icon="map marker alternate"
             placeholder="Want to add Location?"
           />
@@ -119,8 +123,9 @@ function CreatePost({ user, setPosts }) {
           />
         </Form.Group>
 
-        <div
+        <div 
           onClick={() => inputRef.current.click()}
+          className="smallH"
           style={addStyles()}
           onDragOver={e => {
             e.preventDefault();
@@ -141,9 +146,9 @@ function CreatePost({ user, setPosts }) {
           }}
         >
           {media === null ? (
-            <Icon name="plus" size="big" />
+            <Icon name="plus" size="big"  />
           ) : (
-            <Image
+            <Image className="ml-4"
               style={{ height: "150px", width: "150px" }}
               src={mediaPreview}
               alt="PostImage"
@@ -158,6 +163,7 @@ function CreatePost({ user, setPosts }) {
             <Divider hidden />
 
             <Button
+              className="smallH"
               content="Crop Image"
               type="button"
               primary
@@ -169,11 +175,12 @@ function CreatePost({ user, setPosts }) {
 
         <Divider hidden />
 
-        <Button
+        <Button 
           circular
           disabled={newPost.text === "" || loading}
           content={<strong>Post</strong>}
-          style={{ backgroundColor: "#1DA1F2", color: "white" }}
+          style={{ backgroundColor: "#1DA1F2", color: "white" }} 
+          className="smallH"
           icon="send"
           loading={loading}
         />

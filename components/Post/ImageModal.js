@@ -97,7 +97,8 @@ function ImageModal({
         </Grid.Column>
         <Grid.Column>
           <Modal.Content image>
-            <Image wrapped size="large" src={post.picUrl} />
+            <Image wrapped size="medium"
+             src={post.picUrl} />
           </Modal.Content>
         </Grid.Column>
       </Grid>

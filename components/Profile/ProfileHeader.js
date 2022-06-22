@@ -19,7 +19,7 @@ function ProfileHeader({
 
   return (
     <>
-      <Segment basic>
+      <Segment basic className="ml-4">
         <Grid stackable>
           <Grid.Column width={11}>
             <Grid.Row>

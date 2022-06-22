@@ -20,6 +20,7 @@ import LikesList from "./LikesList";
 import ImageModal from "./ImageModal";
 import NoImageModal from "./NoImageModal";
 
+
 function CardPost({ post, user, setPosts, setShowToastr, socket }) {
   const [likes, setLikes] = useState(post.likes);
 
@@ -45,7 +46,8 @@ function CardPost({ post, user, setPosts, setShowToastr, socket }) {
   return (
     <>
       {showModal && (
-        <Modal
+        <div style={{marginLeft:"120px"}}>
+        <Modal 
           open={showModal}
           closeIcon
           closeOnDimmerClick
@@ -59,18 +61,19 @@ function CardPost({ post, user, setPosts, setShowToastr, socket }) {
             )}
           </Modal.Content>
         </Modal>
+        </div>
       )}
 
       <Segment basic>
-      <Card color="teal" fluid className="" 
-        style={{width:"60%" , height:"35%"}}
+      <Card color="teal" fluid className="posts" 
+        style={{width:"100%" , height:"450px"}}
         >
           {post.picUrl && (
             <Image 
               src={post.picUrl}
-              style={{ cursor: "pointer" , width:"100%",height:"100%" }}
+              style={{ cursor: "pointer" , width:"100%",height:"150px" ,objectFit:"cover" }}
               floated="left"
-              wrapped
+              
               ui={false}
               alt="PostImage"
               onClick={() => setShowModal(true)}
@@ -90,6 +93,7 @@ function CardPost({ post, user, setPosts, setShowToastr, socket }) {
                       src="/deleteIcon.svg"
                       style={{ cursor: "pointer" }}
                       size="mini"
+                      className="del"
                       floated="right"
                     />
                   }
@@ -99,6 +103,7 @@ function CardPost({ post, user, setPosts, setShowToastr, socket }) {
 
                   <Button
                     color="red"
+                    className="ml-4"
                     icon="trash"
                     content="Delete"
                     onClick={() => deletePost(post._id, setPosts, setShowToastr)}
@@ -121,14 +126,14 @@ function CardPost({ post, user, setPosts, setShowToastr, socket }) {
               style={{
                 fontSize: "17px",
                 letterSpacing: "0.1px",
-                wordSpacing: "0.35px"
+                wordSpacing: "0.35px", textTransform:"capitalize"
               }}
             >
               {post.text}
             </Card.Description>
           </Card.Content>
 
-          <Card.Content extra>
+          <Card.Content style={{marginTop:"2px"}}>
             <Icon
               name={isLiked ? "heart" : "heart outline"}
               color="red"

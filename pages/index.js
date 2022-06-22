@@ -92,7 +92,7 @@ function Index({ user, postsData, errorLoading }) {
   }, []);
 
   return (
-    <>
+    <div className="ml-4 p-4" style={{}}>
       {notificationPopup && newNotification !== null && (
         <NotificationPortal
           newNotification={newNotification}
@@ -128,7 +128,7 @@ function Index({ user, postsData, errorLoading }) {
           >
             <Row>
             {posts.map(post => (
-              <Col key={post._id} md={6}>
+              <Col key={post._id} md={6} sm={12} lg={6} className="cardDet">
               <CardPost
                 socket={socket}
                 key={post._id}
@@ -143,7 +143,7 @@ function Index({ user, postsData, errorLoading }) {
           </InfiniteScroll> 
         )}
       </Segment>
-    </>
+    </div>
   );
 }
 
