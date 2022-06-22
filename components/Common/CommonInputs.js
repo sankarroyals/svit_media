@@ -11,6 +11,7 @@ function CommonInputs({
     <>
       <Form.Field
         required
+        
         control={TextArea}
         name="bio"
         value={bio}

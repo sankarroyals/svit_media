@@ -46,6 +46,9 @@ body {
   .cardDet{
     padding: 2px !important;
   }
+  .imageUp{
+    width: 100% !important;
+  }
  
   
   
@@ -53,5 +56,6 @@ body {
 .smallH{
   margin-top: 13px !important;
 }
+
 
 
