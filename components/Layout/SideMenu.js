@@ -1,10 +1,10 @@
 import React from "react";
-import { List, Icon } from "semantic-ui-react";
+import { List, Icon,Image } from "semantic-ui-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { logoutUser } from "../../utils/authUser";
 
-function SideMenu({
+function SideMenu({user,
   user: { unreadNotification, email, unreadMessage, username },
   pc = true
 }) {
@@ -17,7 +17,7 @@ function SideMenu({
       
       <List style={{ paddingTop: "1rem" }} size="big" verticalAlign="middle" selection>
      
-
+      <Image src={user.profilePicUrl} circular avatar inline  style={{width:"60px",height:"60px",marginLeft:"50px",marginBottom:"30px",marginTop:"30px"}}/> 
         
         <Link href="/">
           <List.Item active={isActive("/")}>

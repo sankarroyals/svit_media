@@ -48,9 +48,9 @@ router.post("/", async (req, res) => {
         .toString()}, There was a request for password reset. <a href=${href}>Click this link to reset the password </a>   </p>
       <p>This token is valid for only 1 hour.</p>`
     };
-
+    console.log(user.email)
     transporter.sendMail(mailOptions, (err, info) => err && console.log(err));
-
+    
     return res.status(200).send("Email sent successfully");
   } catch (error) {
     console.error(error);

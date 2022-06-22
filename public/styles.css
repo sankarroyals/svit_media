@@ -3,7 +3,7 @@
 }
 
 body {
-  background: var(--bodyBg);
+  background: #f7e8e8 !important;
 }
 
 .spanLikesList:hover {

@@ -58,6 +58,8 @@ function SearchComponent() {
         setText("");
       }}
       loading={loading}
+      className="mt-4"
+      style={{}}
       value={text}
       resultRenderer={ResultRenderer}
       results={results}

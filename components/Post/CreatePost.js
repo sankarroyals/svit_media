@@ -89,7 +89,7 @@ function CreatePost({ user, setPosts }) {
         />
 
         <Form.Group>
-          <Image src={user.profilePicUrl} circular avatar inline />
+          
           <Form.TextArea
           className="mb-4"
             placeholder="Whats Happening"
