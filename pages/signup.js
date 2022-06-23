@@ -7,7 +7,7 @@ import axios from "axios";
 import baseUrl from "../utils/baseUrl";
 import { registerUser } from "../utils/authUser";
 import uploadPic from "../utils/uploadPicToCloudinary";
-const regexUserName = /^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/;
+const regexUserName = /^[1-2][5-8][9][Ff][1][Aa][0][1-5][0-9Aa][0-9]$/;
 let cancel;
 
 function Signup() {
@@ -73,7 +73,7 @@ function Signup() {
       if (errorMsg !== null) setErrorMsg(null);
 
       if (res.data === "Available") {
-        setUsernameAvailable(true);
+        // setUsernameAvailable(true);
         setUser(prev => ({ ...prev, username }));
       }
     } catch (error) {
@@ -170,15 +170,20 @@ function Signup() {
             value={username}
             onChange={e => {
               setUsername(e.target.value);
-              if (regexUserName.test(e.target.value)) {
+              console.log(regexUserName.test(e.target.value))
+              console.log(usernameAvailable)
+              if(regexUserName.test(e.target.value)) {
+                
                 setUsernameAvailable(true);
+                console.log("hi")
               } else {
                 setUsernameAvailable(false);
+                console.log("bye")
               }
             }}
             fluid
             icon={usernameAvailable ? "check" : "close"}
-            iconPosition="left"
+            iconPosition="left" 
           />
 
           <CommonInputs
