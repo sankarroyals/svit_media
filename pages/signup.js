@@ -7,7 +7,7 @@ import axios from "axios";
 import baseUrl from "../utils/baseUrl";
 import { registerUser } from "../utils/authUser";
 import uploadPic from "../utils/uploadPicToCloudinary";
-const regexUserName = /^[1][5-9][9][Ff][1][Aa][0][1-5][0-9AaBbCc][0-9]$|^[2][0-3][9][Ff][1][Aa][0][1-5][0-9AaBaCc][0-9]$/;
+const regexUserName = /^[1][5-9][9][Ff][1][Aa][0][1-5][0-9AaBbCc][0-9]$|^[2][0-3][9][Ff][1][Aa][0][1-5][0-9AaBbCc][0-9]$/;
 let cancel;
 
 function Signup() {
