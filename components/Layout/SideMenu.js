@@ -17,7 +17,9 @@ function SideMenu({user,
       
       <List style={{ paddingTop: "1rem" }} size="big" verticalAlign="middle" selection>
      
-      <Image src={user.profilePicUrl} circular avatar inline  style={{width:"60px",height:"60px",marginLeft:"50px",marginBottom:"30px",marginTop:"30px"}}/> 
+      <Image src={user.profilePicUrl} circular avatar inline  style={{width:"60px",height:"60px",marginLeft:"30px",marginBottom:"30px",marginTop:"30px"}}
+        className="pimage"
+      /> 
         
         <Link href="/">
           <List.Item active={isActive("/")}>

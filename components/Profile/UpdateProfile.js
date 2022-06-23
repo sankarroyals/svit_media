@@ -39,6 +39,7 @@ function UpdateProfile({ Profile }) {
     <>
       <Form
         error={errorMsg !== null}
+        className="imageUp"
         loading={loading}
         style={{ width:"40%" , height:"95px" , margin:"auto" , marginTop:"1rem" }}
         onSubmit={async e => {

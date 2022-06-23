@@ -37,9 +37,13 @@ body {
   margin: 0;
   padding: 0.5em 1em 0.75em !important;
 }
+.pimage{
+  margin-left: 2px !important;
+}
 @media (max-width:398px) {
   .posts{
    width:250px !important;
+
   
   
   }
@@ -49,8 +53,25 @@ body {
   .imageUp{
     width: 100% !important;
   }
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .imageUp{
+    width:700px !important; 
+  }
  
   
+  
+}
+@media (min-width:398px) and (max-width:560px){
+  .menu{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+  }
   
 }
 .smallH{

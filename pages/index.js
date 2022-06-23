@@ -92,7 +92,7 @@ function Index({ user, postsData, errorLoading }) {
   }, []);
 
   return (
-    <div className="ml-4 p-4" style={{}}>
+    <div className="ml-4 p-2" style={{}} >
       {notificationPopup && newNotification !== null && (
         <NotificationPortal
           newNotification={newNotification}

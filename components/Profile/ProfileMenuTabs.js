@@ -11,7 +11,7 @@ function ProfileMenuTabs({
 }) {
   return (
     <>
-      <Menu pointing secondary>
+      <Menu pointing secondary className="menu">
         <Menu.Item
           name="profile"
           active={activeItem === "profile"}
