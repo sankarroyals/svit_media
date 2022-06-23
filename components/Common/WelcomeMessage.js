@@ -33,10 +33,10 @@ export const FooterMessage = () => {
         </>
       ) : (
         <>
-          <Message attached="bottom" info>
+          {/* <Message attached="bottom" info>
             <Icon name="lock" />
             <Link href="/reset">Forgot Password?</Link>
-          </Message>
+          </Message> */}
 
           <Message attached="bottom" warning>
             <Icon name="help" />

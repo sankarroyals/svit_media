@@ -7,7 +7,7 @@ import axios from "axios";
 import baseUrl from "../utils/baseUrl";
 import { registerUser } from "../utils/authUser";
 import uploadPic from "../utils/uploadPicToCloudinary";
-const regexUserName = /^[1-2][5-8][9][Ff][1][Aa][0][1-5][0-9Aa][0-9]$/;
+const regexUserName = /^[1][5-9][9][Ff][1][Aa][0][1-5][0-9AaBaCc][0-9]$|^[2][0-3][9][Ff][1][Aa][0][1-5][0-9AaBaCc][0-9]$/;
 let cancel;
 
 function Signup() {
@@ -73,7 +73,7 @@ function Signup() {
       if (errorMsg !== null) setErrorMsg(null);
 
       if (res.data === "Available") {
-        // setUsernameAvailable(true);
+        
         setUser(prev => ({ ...prev, username }));
       }
     } catch (error) {
@@ -166,7 +166,7 @@ function Signup() {
             error={!usernameAvailable}
             required
             label="Username"
-            placeholder="Username"
+            placeholder="Enter your roll no: Example(189f1a05a3)"
             value={username}
             onChange={e => {
               setUsername(e.target.value);
