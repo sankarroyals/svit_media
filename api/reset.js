@@ -41,7 +41,7 @@ router.post("/", async (req, res) => {
 
     const mailOptions = {
       to: user.email,
-      from: "shahidsameer329@gmail.com",
+      from: "sankarroyals3@gmail.com",
       subject: "Hi there! Password reset request",
       html: `<p>Hey ${user.name
         .split(" ")[0]
